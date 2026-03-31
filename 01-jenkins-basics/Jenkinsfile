@@ -13,7 +13,11 @@ pipeline {
                     '''
                 }
 
-                sh "pip install -r requirements.txt"
+                dir('01-jenkins-basics') {
+                    sh '''
+                    pip3 install -r requirements.txt
+                    '''
+                }
             
             }
         }
